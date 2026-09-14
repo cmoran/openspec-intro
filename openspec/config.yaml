@@ -1,0 +1,20 @@
+schema: spec-driven
+
+# Contexto del proyecto
+# Este contexto es consultado por agentes de IA como Antigravity al generar propuestas, especificaciones y tareas.
+context: |
+  Proyecto educativo para enseñar Desarrollo Guiado por Especificaciones (Spec-Driven Development) con OpenSpec y Antigravity.
+  Idioma del proyecto: Español.
+  Enfoque: Tutoriales claros, arquitectura por capas, ejemplos de sistemas de inventario y ventas.
+
+# Reglas por artefacto
+rules:
+  proposal:
+    - Explicar con claridad el 'Por qué' de negocio y las capacidades que se agregan o modifican.
+  specs:
+    - Definir requerimientos funcionales claros utilizando escenarios con formato BDD (WHEN ... THEN ...).
+    - Incluir casos límite y validaciones de negocio.
+  design:
+    - Detallar arquitectura, modelos de entidades/datos y decisiones técnicas con sus trade-offs.
+  tasks:
+    - Desglosar las tareas en pasos atómicos, ordenados lógicamente y fácilmente verificables.
