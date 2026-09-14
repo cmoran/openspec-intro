@@ -44,29 +44,33 @@ flowchart TD
 
 ---
 
-## 📦 Hoja de Ruta de los Casos de Ejemplo (Próximo Cambio)
+## 📦 Casos de Ejemplo Implementados como Cambios OpenSpec
 
-Para que tus amigos vean el poder de OpenSpec en acción, modelamos una evolución realista de un producto comercial dividida en fases incrementales:
+Para que tus amigos vean el poder de OpenSpec en acción, modelamos una evolución realista de un producto comercial dividida en 4 fases incrementales, todas disponibles en `openspec/changes/`:
 
-1. **Fase 1: Sistema de Control de Inventario Monolocal (Base)**
+1. 🏬 **[Fase 1: Sistema de Control de Inventario Monolocal (Base)](openspec/changes/inventario-monolocal-base)**
    - Catálogo de productos (SKU, nombre, precio de costo, precio venta).
    - Registro de entradas, salidas y ajustes manuales de stock en una única sucursal.
-   - Kardex o historial de movimientos de inventario.
+   - Kardex e historial cronológico inmutable de movimientos.
+   - 📂 Artefactos: [proposal.md](openspec/changes/inventario-monolocal-base/proposal.md) | [specs/](openspec/changes/inventario-monolocal-base/specs) | [design.md](openspec/changes/inventario-monolocal-base/design.md) | [tasks.md](openspec/changes/inventario-monolocal-base/tasks.md)
 
-2. **Fase 2: Inventario Monolocal + Punto de Venta (POS) + Multivendedor**
+2. 💳 **[Fase 2: Inventario Monolocal + Punto de Venta (POS) + Multivendedor](openspec/changes/ventas-pos-multivendedor)**
    - Módulo de ventas segregado del módulo de inventario.
    - Operación por múltiples vendedores con caja asignada.
    - Restricción estricta de seguridad: los vendedores **no** pueden modificar stock directamente; el stock se descuenta automáticamente con cada venta realizada y aprobada.
+   - 📂 Artefactos: [proposal.md](openspec/changes/ventas-pos-multivendedor/proposal.md) | [specs/](openspec/changes/ventas-pos-multivendedor/specs) | [design.md](openspec/changes/ventas-pos-multivendedor/design.md) | [tasks.md](openspec/changes/ventas-pos-multivendedor/tasks.md)
 
-3. **Fase 3: Inventario Multi-local + Multivendedor + Roles + Quiebres de Stock**
+3. 🏢 **[Fase 3: Inventario Multi-local + Multivendedor + Roles + Quiebres de Stock](openspec/changes/inventario-multilocal-roles-quiebres)**
    - Gestión de múltiples bodegas/sucursales con stock independiente.
    - Sistema de roles (RBAC): *Administrador*, *Encargado de Inventario*, *Vendedor*.
    - Módulo de alerta y reporte de quiebre de stock (al alcanzar el umbral mínimo por sucursal).
+   - 📂 Artefactos: [proposal.md](openspec/changes/inventario-multilocal-roles-quiebres/proposal.md) | [specs/](openspec/changes/inventario-multilocal-roles-quiebres/specs) | [design.md](openspec/changes/inventario-multilocal-roles-quiebres/design.md) | [tasks.md](openspec/changes/inventario-multilocal-roles-quiebres/tasks.md)
 
-4. **Fase 4 (Módulo afín complementario): Sistema de Compras, Proveedores y Reabastecimiento Automático**
-   - Directorio de proveedores y catálogo de precios de compra.
-   - Generación automática de Órdenes de Compra (PO) cuando un producto entra en quiebre de stock.
-   - Recepción de mercadería con actualización automática de stock y costeo ponderado.
+4. 🚚 **[Fase 4 (Módulo afín): Sistema de Compras, Proveedores y Reabastecimiento Automático](openspec/changes/compras-reabastecimiento-proveedores)**
+   - Directorio de proveedores y catálogo de precios de compra con *lead time*.
+   - Generación automática de Órdenes de Compra (PO) en borrador cuando un producto entra en quiebre de stock.
+   - Recepción física de mercadería con actualización automática de existencias en almacén.
+   - 📂 Artefactos: [proposal.md](openspec/changes/compras-reabastecimiento-proveedores/proposal.md) | [specs/](openspec/changes/compras-reabastecimiento-proveedores/specs) | [design.md](openspec/changes/compras-reabastecimiento-proveedores/design.md) | [tasks.md](openspec/changes/compras-reabastecimiento-proveedores/tasks.md)
 
 ---
 
